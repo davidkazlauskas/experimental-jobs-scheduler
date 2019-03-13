@@ -1,3 +1,9 @@
-(executable
- (name jobs_tool)
- (libraries core))
+(alias
+ (name default)
+ (deps src/jobs_tool.exe))
+
+(env
+  (dev
+    (flags (:standard -warn-error -A))))
+
+(include_subdirs unqualified)

@@ -1,0 +1,5 @@
+#!/bin/bash
+
+CURRENT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
+
+dune build && $CURRENT_DIR/_build/default/src/jobs_tool.exe "$@"

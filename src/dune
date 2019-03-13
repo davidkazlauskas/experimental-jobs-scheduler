@@ -1,0 +1,6 @@
+(include_subdirs no)
+
+(executable
+  (name jobs_tool)
+  (libraries core yojson ppx_deriving_yojson.runtime xml-light str)
+  (preprocess (pps ppx_deriving_yojson)))
