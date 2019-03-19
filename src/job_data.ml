@@ -155,7 +155,7 @@ let dedup_settings_first_only settings =
       if setting_doesnt_exist k then
         final := (k, v) :: !final
     );
-  !final
+  List.rev !final
 
 let find_config (conf_list: setting list) ~key ~default =
   List.filter_map conf_list ~f:(fun (k, v) ->
